@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
+      height: 100vh;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    
+    .box-grow {
+      flex-grow: 1; 
+      background-color: #e74c3c;
+    }
+
+    
+    .box-shrink {
+      flex-shrink: 1; 
+      background-color: #f39c12;
+    }
+
+   
+    .box-basis {
+      flex-basis: 200px; 
+      background-color: #2ecc71;
+    }
+
+    
+    .box-align-self {
+      align-self: flex-start; 
+      background-color: #9b59b6;
+    }
+
+    
+    .box-order {
+      order: 1; 
+      background-color: #f39c12;
+    }
+
+    
+    .container-column {
+      flex-direction: column; 
+    }
+
+    .container-reverse {
+      flex-direction: row-reverse; 
+    }
+
+    
+    .container-wrap {
+      flex-wrap: wrap;
+      height: 400px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box box-grow">2</div>
+    <div class="box box-shrink">3</div>
+    <div class="box box-basis">4</div>
+    <div class="box box-align-self">5</div>
+    <div class="box box-order">6</div>
+  </div>
+
+  <h2>flex-direction: column</h2>
+  <div class="container container-column">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <h2>flex-direction: row-reverse</h2>
+  <div class="container container-reverse">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <h2>flex-wrap: wrap</h2>
+  <div class="container container-wrap">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+  </div>
+
+</body>
+</html>
